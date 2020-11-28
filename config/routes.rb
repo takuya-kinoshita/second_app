@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'static_pages/home', to: "static_pages#home"
-  get 'static_pages/help', to: "static_pages#help"
+  get 'users/new'
+  get '/help', to: "static_pages#help", as: 'helf'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get "/" , to: "static_pages#home"
-  get "static_pages/about", to: "static_pages#about"
-
+  root "static_pages#home"
+  get "/about", to: "static_pages#about"
+  get "/login", to: "static_pages#login"
+  get "/contact", to: "static_pages#contact"
+  get "/signup", to: "users#new"
 end
