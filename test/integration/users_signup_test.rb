@@ -25,7 +25,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                         email: "aaa@gmail.com",
                                         password: "password",
                                         password_confirmation: "password"}}
-    follow_redirect!                                        
+    follow_redirect!
     assert_template 'users/show'
     assert_not flash.empty?
     end
