@@ -1,0 +1,4 @@
+Takuya:
+  name: Takuya Kinoshita
+  email: takuya@gmail.com
+  password_digest: <%= User.digest('password') %>
